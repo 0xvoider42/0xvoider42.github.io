@@ -1,4 +1,4 @@
-# Software-development-project
+# coinTracker
 The coinTracker is a website which tracks your investments in crypto space.
 With coinTracker you will be able to check up to 50 coins, your portfolio, articles in the space, weather and crypto graphs.
 The website will be developed with Javascript paired with svelte framework and CSS/HTML
