@@ -41,7 +41,8 @@ function Nav() {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/weather' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/weather' className='nav-links' onClick={closeMobileMenu} />
+              <Link to='/news' className='nav-links' onClick={closeMobileMenu}>
                 News
               </Link>
             </li>
