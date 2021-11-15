@@ -12,10 +12,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path='/' exact element={<Home />} />
-<<<<<<< HEAD
           <Route path='/news' element={<NewsPage />} />
-=======
->>>>>>> 9eaabd8fee72ae88003931daa56c688890df701c
         </Routes>
       </Router>
     </>
