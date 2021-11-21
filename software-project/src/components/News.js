@@ -1,22 +1,37 @@
-import React, { useState, Component, componentDidMount } from 'react';
-import { FetchingNews } from './APIs/News';
-import ListOfArticles from '../components/APIs/ListOfArticles';
+import React from 'react';
+import './News.css';
 
-class NEWS extends Component {
+class News extends React.Component {
+  state = {
+    loading: true,
+    news: null,
+  };
+  async componentDidMount() {
+    const time = Date.now();
+    let getNews;
+    const url = `https://newsapi.org/v2/everything?q=ethereum&from=${time}&sortBy=publishedAt&language=&apiKey=b6ce77bd69d14178acef194fd682025b`;
+
+    const raw = await fetch(url);
+    getNews = await raw.json();
+    this.setState({ news: getNews.articles[0], loading: false });
+    console.log(getNews.articles[0]);
+  }
+
   render() {
-    const NewsList = (article) => (
-      <li>
-        <a href={`${article.url}`}>{article.title}</a>
-      </li>
-    );
-
-    const newsItems = this.state.newsItems.map((e) => NewsList(e));
     return (
-      <div className='container flex-auto mx-auto gap-x-4 gap-y-8 px-10'>
-        <div>{newsItems}</div>
-      </div>
+      <>
+        <div>
+          {this.state.loading || !this.state.news ? (
+            <div>waiting for the news...</div>
+          ) : (
+            <div>
+              <div>{this.state.news.content}</div>
+            </div>
+          )}
+        </div>
+      </>
     );
   }
 }
 
-export default NEWS;
+export default News;
