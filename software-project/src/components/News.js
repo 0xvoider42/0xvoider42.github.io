@@ -1,37 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { NewsContext } from '../components/APIs/News';
+import NewsArticle from './NewsArticle';
 import './News.css';
 
-class News extends React.Component {
-  state = {
-    loading: true,
-    news: null,
-  };
-  async componentDidMount() {
-    const time = Date.now();
-    let getNews;
-    const url = `https://newsapi.org/v2/everything?q=ethereum&from=${time}&sortBy=publishedAt&language=&apiKey=b6ce77bd69d14178acef194fd682025b`;
+function News(props) {
+  const { data } = useContext(NewsContext);
+  const NewsMap = new Map();
+  NewsMap.set('article', {});
+  console.log(data);
 
-    const raw = await fetch(url);
-    getNews = await raw.json();
-    this.setState({ news: getNews.articles[0], loading: false });
-    console.log(getNews.articles[0]);
-  }
-
-  render() {
-    return (
-      <>
-        <div>
-          {this.state.loading || !this.state.news ? (
-            <div>waiting for the news...</div>
-          ) : (
-            <div>
-              <div>{this.state.news.content}</div>
-            </div>
-          )}
-        </div>
-      </>
-    );
-  }
+  return (
+    <>
+      <div>
+        {data
+          ? data.articles.map((news) => <NewsArticle data={news} key={news.url} />)
+          : 'Loading'}
+      </div>
+    </>
+  );
 }
 
 export default News;
