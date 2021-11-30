@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "news": "News",
+    "crypto": "Crypto",
+    "weather": "Weather"
+  },
+  "port": {
+    "coins": "Coins",
+    "price": "Price",
+    "volume": "Volume",
+    "market_cap": "Market Cap"
+  },
+  "footer": {
+    "welcome": "This is a project developed for the EEK University"
+  },
+  "hero": {
+    "slogan": "Welcome to the World of Crypto"
+  },
+  "news": {
+    "read": "Read on"
+  },
+  "weather": {
+    "search": "search",
+    "feels_like": "feels like",
+    "wind_direction": "wind direction",
+    "speed_km/h": "Speed km/h",
+    "gust_speed": "wind gust speed",
+    "humidity": "humidity",
+    "precipitation": "Precipitation",
+    "pressure": "Pressure",
+    "uv": "UV index",
+    "visibility": "Visibility",
+    "millimeter": "mm",
+    "millibar": "mb",
+    "kilometer": "km"
+  }
+}

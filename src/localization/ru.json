@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Дом",
+    "portfolio": "портфолио",
+    "news": "Новости",
+    "crypto": "Крипто",
+    "weather": "Погода"
+  },
+  "port": {
+    "coins": "Валута",
+    "price": "Цена",
+    "volume": "Объем на рынке",
+    "market_cap": "Рыночная капитализация"
+  },
+  "footer": {
+    "welcome": "Это проект, разработанный для EEK University."
+  },
+  "hero": {
+    "slogan": "Добро пожаловать в мир криптовалюты"
+  },
+  "news": {
+    "read": "Читать"
+  },
+  "weather": {
+    "search": "поиск",
+    "feels_like": "чувствовать как",
+    "wind_direction": "направление ветра",
+    "speed_km/h": "Скорость км / ч",
+    "gust_speed": "скорость порыва ветра",
+    "humidity": "влажность",
+    "precipitation": "Осадки",
+    "pressure": "Давление",
+    "uv": "УФ-индекс",
+    "visibility": "Видимость",
+    "millimeter": "мм",
+    "millibar": "мбар",
+    "kilometer": "км"
+  }
+}
