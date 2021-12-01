@@ -21,5 +21,6 @@ The website has not yet had a database integration which could be implemented in
 8. pushing up everything to github.
 9. deploying the app.
 
+If you find anything fishy please create an issue on the git page linked in the footer
 
 The website is deploied here: https://cointracker.hostman.site/
