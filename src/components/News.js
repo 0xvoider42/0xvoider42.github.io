@@ -4,16 +4,20 @@ import { useTranslation } from 'react-i18next';
 import './News.css';
 
 function News() {
+  // creating a stateful hooks to be used in react components
   const [articleData, setData] = useState(null);
   const [search, setSearch] = useState('crypto');
   const [getArticle, setGetArticle] = useState();
+  // t is a internationalization variable
   const { t } = useTranslation();
 
   let date = new Date('YYYY - MM - DD');
   const url = `https://newsapi.org/v2/everything?q=${search}&from=${date}&sortBy=publishedAt&language=en&apiKey=b6ce77bd69d14178acef194fd682025b`;
 
+  // @useEffect() react basic hook used to subscribe and listen to the api
   useEffect(() => {
     getData();
+    // @mounted controls the data leak cases
     let mounted = true;
     async function getData() {
       const raw = await fetch(url);
@@ -22,7 +26,7 @@ function News() {
       if (mounted) {
         setTimeout(() => {
           setData(posts);
-        }, 5 * 1000);
+        }, 1 * 1000);
       }
       console.log(posts);
     }
@@ -31,9 +35,11 @@ function News() {
     };
   });
 
+  // handler for the input in the search bar
   const inputHandler = (event) => {
     setGetArticle(event.target.value);
   };
+  // assigns the value to the @useState value
   const submitHandler = () => {
     setSearch(getArticle);
   };
@@ -57,7 +63,7 @@ function News() {
                 type='button'
                 onClick={submitHandler}
               >
-                {t('weather.search')}
+                {t('news.search')}
               </button>
             </div>
           </form>

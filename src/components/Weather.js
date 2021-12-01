@@ -4,33 +4,38 @@ import { useTranslation } from 'react-i18next';
 import './Weather.css';
 
 function Weather() {
+  // creating a stateful hooks to be used in react components
   const [apiData, setApiData] = useState();
-  const [getState, setGetState] = useState('Tallinn');
-  const [state, setState] = useState();
+  const [getState, setGetState] = useState();
+  const [state, setState] = useState('Tallinn');
+  // t is a internationalization variable
   const { t } = useTranslation();
 
-  const url = ` http://api.weatherapi.com/v1/current.json?key=21f37490a27e473d98b234230212611&q=${state}`;
+  const url = ` https://api.weatherapi.com/v1/current.json?key=21f37490a27e473d98b234230212611&q=${state}`;
 
+  // @useEffect() react basic hook used to subscribe and listen to the api
   useEffect(() => {
     getWeather();
-
+    // @mounted controls the data leak cases
     let mounted = true;
     async function getWeather() {
       const raw = await fetch(url);
       const rain = await raw.json();
       console.log(rain);
       if (mounted) {
-        setTimeout(() => setApiData(rain), 2 * 1000);
+        setTimeout(() => setApiData(rain), 1 * 1000);
       }
     }
     return () => {
       mounted = false;
     };
   });
+
+  // handler for the input in the search bar
   const inputHandler = (event) => {
     setGetState(event.target.value);
   };
-
+  // assigns the value to the @useState value
   const submitHandler = () => {
     setState(getState);
   };

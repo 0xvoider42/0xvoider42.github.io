@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 function Footer() {
+  // t is a internationalization variable
   const { t } = useTranslation();
 
   return (

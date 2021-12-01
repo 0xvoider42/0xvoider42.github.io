@@ -4,11 +4,14 @@ import { useTranslation } from 'react-i18next';
 import './Nav.css';
 
 function Nav() {
+  // t is a internationalization variable
   const { t } = useTranslation();
+  // creating a states to be used in react components
   const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+  // handlers to be used in handling clicks and nav
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const [button, setButton] = useState(true);
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -44,11 +47,6 @@ function Nav() {
             <li className='nav-item'>
               <Link to='/news' className='nav-links' onClick={closeMobileMenu}>
                 {t('nav.news')}
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/crypto' className='nav-links' onClick={closeMobileMenu}>
-                {t('nav.crypto')}
               </Link>
             </li>
             <li className='nav-item'>

@@ -4,14 +4,18 @@ import { useTranslation } from 'react-i18next';
 import './Portfolio.css';
 
 function Portfolio() {
+  // creating a stateful hooks to be used in react components
   const [coins, setCoins] = useState([]);
   const picSize = { maxWidth: '50px', maxHeight: '50px' };
+  // t is a internationalization variable
   const { t } = useTranslation();
 
   const url = `https://api.coinstats.app/public/v1/coins?skip=0&limit=50&currency=EUR`;
 
+  // @useEffect() react basic hook used to subscribe and listen to the api
   useEffect(() => {
     getCoins();
+    // @mounted controls the data leak cases
     let mounted = true;
     async function getCoins() {
       const raw = await fetch(url);
@@ -21,7 +25,7 @@ function Portfolio() {
       if (mounted) {
         setTimeout(() => {
           setCoins(crypto);
-        }, 5 * 1000);
+        }, 1 * 1000);
       }
     }
     return () => {
