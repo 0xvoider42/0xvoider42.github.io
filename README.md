@@ -2,6 +2,7 @@
 If you ever wanted to know more about crypto and needed one website to have it all... this is it!
 With CoinTracker you are able to check up to 50 coins, articles in the space, and weather.
 API calls are made with a cost effective and fast standards, this will ensure that you will be getting up to date information up to a second.
+The website is available on 2 languages, English and Russian and will switch between the two depending on the browser language.
 The website has not yet had a database integration which could be implemented in the future rollouts. As well as crypto graphs and profile, depending on the community requests.
 
 ## How to run the code?
