@@ -17,3 +17,6 @@ The website will be developed with Javascript paired with react framework.
 7. Refactoring code base.
 8. pushing up everything to github.
 9. deploying the app.
+
+
+The website is deploied here: https://cointracker.hostman.site/
