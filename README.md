@@ -1,12 +1,15 @@
-# coinTracker
-The coinTracker is a website which tracks your investments in crypto space.
-With coinTracker you will be able to check up to 50 coins, articles in the space, and weather.
-The website will be developed with Javascript paired with react framework.
+# CoinTracker
+If you ever wanted to know more about crypto and needed one website to have it all... this is it!
+With CoinTracker you are able to check up to 50 coins, articles in the space, and weather.
+API calls are made with a cost effective and fast standards, this will ensure that you will be getting up to date information up to a second.
+The website has not yet had a database integration which could be implemented in the future rollouts. As well as crypto graphs and profile, depending on the community requests.
+
 ## How to run the code?
 1. You need to download and install yarn on your machine. ( https://yarnpkg.com/getting-started/install )
 2. After installing yarn, navigate to the directory where you installed the code and run the command **yarn -> yarn start**. This will spinn up a node server and prompt you the localhost website.
 3. Click on the website or copy it to your browser.
 4. Done. Thank you for trying it out :)
+
 ## Milestones
 1. Initializing basic React application which loads in the browser with local host.
 2. Creating landing page with all additional pages as tiles/dropdown menu.
