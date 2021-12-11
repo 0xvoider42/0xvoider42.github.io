@@ -6,6 +6,7 @@ The website is available on 2 languages, English and Russian and will switch bet
 The website has not yet had a database integration which could be implemented in the future rollouts. As well as crypto graphs and profile, depending on the community requests.
 
 ## How to run the code?
+Prerequisits - node should be on your machine and running on version 14 to 16, node 17 is not yet compatible with the stack used in the project and later than V14 is glithcy.
 1. You need to download and install yarn on your machine. ( https://yarnpkg.com/getting-started/install )
 2. After installing yarn, navigate to the directory where you installed the code and run the command **yarn -> yarn start**. This will spinn up a node server and prompt you the localhost website.
 3. Click on the website or copy it to your browser.
